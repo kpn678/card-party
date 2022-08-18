@@ -1,6 +1,5 @@
 # 🎉 Card Party 🎉
 
-
 ## Table of Contents
 - [Introduction](#introduction)
 - [Technologies](#technologies)
@@ -11,28 +10,29 @@
 - [Project Specifications](#project-specifications)
 
 ### Introduction
-Do you want to show your friends and family that you’re thinking about them, but you aren’t quite sure what to say? Liven up someone’s day with Card Party, the greeting card generator that provides a random joke or compliment to brighten someone’s day. Make a card for your mom, or your pets, or your friends, or your mailman! The choice is yours.
+Do you want to show your friends and family that you’re thinking about them, but you aren’t quite sure what to say? Liven up someone’s day with Card Party, the greeting card generator that provides a random joke or compliment to brighten someone’s day. Make a card for your mom, your pets, your friends, or your mailman! The choice is yours.
 
-Card Party allows you to create a card with a compliment or joke. Once you are finished writing your card, you can save it for your reference. Or, print out a PDF with your card message and send it to the intended recipient.  Once you’re finished with a saved card, you can delete it with the click of a button. Enjoy making all sorts of cards to thrill and delight the people in your life!
+Card Party allows you to create a card with a compliment or joke. Once you are finished writing your card, you can save it for your reference. Or, you can print out a PDF with your card message and send it to the intended recipient. Once you’re finished with a saved card, you can delete it with the click of a button. Enjoy making all sorts of cards to thrill and delight the people in your life!
 
 
 ### Technologies
 - React
-- React Router
 - TypeScript
-- Cypress Testing
 - HTML
 - CSS
-- Third Party API fetch GET calls
+- React Router
+- Cypress
+- Fetch API
 - jsPDF
 - html2canvas
 
 ### Set Up
-1.  Clone this [repository](https://github.com/kpn678/stretch-tech).
+1.  Clone this [repository](https://github.com/kpn678/card-party).
 2. `cd` into the directory.
-3. Run `npm i` in your terminal
-4. Run `npm run start-dev`
-6. Go to http://localhost:8080/ to view the site.
+3. Run `npm i` in your terminal.
+4. Run `npm run start-dev`.
+5. Go to http://localhost:3000/ to view the site.
+6. Run `npm run cypress` to start testing suite.
 
 ### Deploy Link
 [View the site here!](https://cardy-party.herokuapp.com/)

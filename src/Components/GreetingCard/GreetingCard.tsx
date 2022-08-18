@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import Card from "../../types/Card.type";
 import "./GreetingCard.css";
+import Card from "../../types/Card.type";
 
 interface Props {
   to: string;
@@ -14,9 +14,7 @@ interface Props {
 const GreetingCard: FC<Card> = ({ to, quote, message, from, id, deleteCard }: Props) => {
   return (
     <section className="mini-card">
-      <button className="delete-button" onClick={() => deleteCard(id)}>
-        X
-      </button>
+      <button className="delete-button" onClick={() => deleteCard(id)}>X</button>
       <p className="mini-to">
         <b>To: {to}</b>
       </p>
