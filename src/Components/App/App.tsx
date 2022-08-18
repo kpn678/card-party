@@ -1,6 +1,6 @@
 import React, { FC, useState, MouseEvent } from "react";
-import "./App.css";
 import { Route, Link } from "react-router-dom";
+import "./App.css";
 import NavBar from "../NavBar/NavBar";
 import CardForm from "../CardForm/CardForm";
 import CardPreview from "../CardPreview/CardPreview";
@@ -44,7 +44,7 @@ const App: FC = () => {
         exact
         path="/"
         render={() => (
-          <section className="home" data-cy="home">
+          <section className="home">
             <p className="description">
               Do you want to show your friends and family that you’re thinking
               about them, but you aren’t quite sure what to say? Liven up
@@ -57,24 +57,10 @@ const App: FC = () => {
             </h2>
             <div className="choices">
               <Link to="/create-card">
-                <button
-                  className="compliments-button"
-                  name="compliment"
-                  onClick={(event) => handleClick(event)}
-                  data-cy="compliments-button"
-                >
-                  Compliments
-                </button>
+                <button className="compliments-button" name="compliment" onClick={(event) => handleClick(event)}>Compliments</button>
               </Link>
               <Link to="/create-card">
-                <button
-                  className="jokes-button"
-                  name="joke"
-                  onClick={(event) => handleClick(event)}
-                  data-cy="jokes-button"
-                >
-                  Jokes
-                </button>
+                <button className="jokes-button" name="joke" onClick={(event) => handleClick(event)}>Jokes</button>
               </Link>
             </div>
           </section>

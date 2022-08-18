@@ -50,9 +50,7 @@ const CardForm = ({ selectCard, choice }: Props) => {
     selectCard(card);
   };
 
-  const handleChange = (
-    event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>
-  ) => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement> | ChangeEvent<HTMLTextAreaElement>) => {
     if (event.target.name === "to-input") {
       setTo(event.target.value);
     } else if (event.target.name === "message-input") {
@@ -65,7 +63,7 @@ const CardForm = ({ selectCard, choice }: Props) => {
   return (
     <form>
       {serverError ? (
-        <h2 data-cy="error-alert" className="error-alert">
+        <h2 className="error-alert">
           {serverError}
         </h2>
       ) : (
@@ -77,16 +75,16 @@ const CardForm = ({ selectCard, choice }: Props) => {
               name="to-input"
               value={to}
               onChange={(event) => handleChange(event)}
-              data-cy="to-input"
+              className="to-input"
             />
           </label>
-          <h2 data-cy="quote">{quote}</h2>
+          <h2 className="quote">{quote}</h2>
           <textarea
             placeholder="Add message here..."
             name="message-input"
             onChange={(event) => handleChange(event)}
             value={message}
-            data-cy="message-input"
+            className="message-input"
           />
           <label htmlFor="from-input">
             From:&nbsp;
@@ -95,24 +93,18 @@ const CardForm = ({ selectCard, choice }: Props) => {
               name="from-input"
               onChange={(event) => handleChange(event)}
               value={from}
-              data-cy="from-input"
+              className="from-input"
             />
           </label>
           <div className="form-buttons">
-            <button
-              className="get-quote-button"
-              data-cy="get-quote-button"
+            <button className="get-quote-button" 
               onClick={(event) => {
                 event.preventDefault();
                 getQuote();
-              }}
-            >
-              {`Get new ${choice}!`}
+              }}>{`Get new ${choice}!`}
             </button>
             <Link to="/preview-card" onClick={() => createCard()}>
-              <button className="make-card-button" data-cy="make-card-button">
-                Make my card!
-              </button>
+              <button className="make-card-button">Make my card!</button>
             </Link>
           </div>
         </>

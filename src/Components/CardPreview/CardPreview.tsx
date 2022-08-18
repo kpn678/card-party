@@ -1,7 +1,7 @@
 import React, { FC } from "react";
+import { Link } from "react-router-dom";
 import "./CardPreview.css";
 import Card from "../../types/Card.type";
-import { Link } from "react-router-dom";
 import { jsPDF } from "jspdf";
 import html2canvas from "html2canvas";
 
@@ -44,18 +44,9 @@ const CardPreview: FC<Props> = ({ currentCard, saveCard }) => {
           <button className="new-card-button">New card!</button>
         </Link>
         <Link to="/saved-cards">
-          <button
-            className="save-card-button"
-            onClick={() => saveCard(currentCard)}
-          >
-            Save my card!
-          </button>
+          <button className="save-card-button" onClick={() => saveCard(currentCard)}>Save my card!</button>
         </Link>
-        <button
-          className="pdf-button"
-          type="button"
-          onClick={handleDownloadPdfTest}
-        >
+        <button className="pdf-button" type="button" onClick={handleDownloadPdfTest}>
           {" "}
           Print to PDF!{" "}
         </button>
